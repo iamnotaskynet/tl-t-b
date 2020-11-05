@@ -6,7 +6,7 @@ Traffic light (html) changeble via bot api (telegram).
 
 #### Usage
 
-k create secret generic glbasecamp  --from-literal=token.json={\"token\":\"YOUR_TOKEN\"}
+k create secret generic glbasecamp  --from-literal=token.json={\\"token\\":\\"YOUR_TOKEN\\"}
 
 k create -f kube/app.yaml
 
