@@ -16,13 +16,14 @@ http.listen(8000, () => {
 
 const TelegramBot = require('node-telegram-bot-api');
 const token = require('/etc/secret/token.json').token;
-const Agent = require('socks5-https-client/lib/Agent');
+// const Agent = require('socks5-https-client/lib/Agent');
+// needed in case to avoid blocks
 console.log("TOKEN:" + token);
 const bot = new TelegramBot(token, { polling: true });
 
 bot.on('message', (msg) => {
     const chatId = msg.chat.id;
-    console.log(msg.text);
+    console.log(msg.text); // Logging
     if (msg.text == "RED ON") {
         io.emit("RED ON");
         bot.sendMessage(chatId, 'Turnin on light red');
@@ -45,6 +46,3 @@ bot.on('message', (msg) => {
         bot.sendMessage(chatId, 'Incorrect input');
     };  
 });
-
-// });
-
