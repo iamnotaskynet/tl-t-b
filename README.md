@@ -12,7 +12,7 @@ k create -f kube/app.yaml
 
 k expose pod trafficlight --port 8080 --target-port 8000 --type LoadBalancer
 
-k3 apply -f kube/ingress.yaml
+k apply -f kube/ingress.yaml
 
 ####
 
