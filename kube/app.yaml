@@ -1,0 +1,24 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: trafficlight
+  namespace: glbasecamp
+  labels: 
+    app: trafficlight
+    run: trafficlight
+spec:
+  containers:
+  - image: iamnotaskynet/trafficlight:0.1
+    name: trafficlight
+    ports:
+    - containerPort: 8000
+      name: http
+    volumeMounts:
+    - name: token
+      mountPath: "/etc/secret"
+      readOnly: true
+  volumes:
+  - name: token
+    secret:
+      secretName: glbasecamp

@@ -1,0 +1,25 @@
+{
+  "name": "tl-t-b",
+  "version": "1.0.0",
+  "description": "### (T)raffic (l)ight (t)elegram (b)ot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamnotaskynet/tl-t-b.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamnotaskynet/tl-t-b/issues"
+  },
+  "homepage": "https://github.com/iamnotaskynet/tl-t-b#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-telegram-bot-api": "^0.50.0",
+    "socket.io": "^2.3.0",
+    "socks5-https-client": "^1.2.1"
+  }
+}
