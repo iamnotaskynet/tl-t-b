@@ -19,7 +19,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "node-telegram-bot-api": "^0.50.0",
-    "socket.io": "^2.3.0",
+    "socket.io": "^2.5.0",
     "socks5-https-client": "^1.2.1"
   }
 }
